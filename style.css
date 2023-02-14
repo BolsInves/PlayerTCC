@@ -8,6 +8,13 @@ body {
     background-position: 50% 30%;
 }
 
+#menu {
+    display: none;
+}
+#btn-menu {
+    display: none;
+}
+
 header {
     text-align: center;
     border-radius: 10px;
@@ -15,7 +22,7 @@ header {
     width: 20%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(0, 54, 0);
+    background-color: rgb(0, 129, 0);
     line-height: 45px;
 }
 
@@ -50,7 +57,12 @@ main {
     padding-bottom: 0.1px;
     background-color: black;
     color: white;
-    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-color: rgb(0, 129, 0);
+    border-style: solid;
+    border-right: 0;
+    border-left: 0;
 }
 
 #winners {
@@ -77,6 +89,10 @@ main {
     header {
         width: 50%;
     }
+    main {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /*Responsivo Mobile*/
@@ -87,9 +103,12 @@ main {
     nav {
         display: grid;
         grid-template-columns: 1fr;
+        height: 31px;
     }
     nav a {
         padding: 0px;
+        top: -200px;
+        position: relative;
     }
     header {
         height: fit-content;
@@ -109,5 +128,21 @@ main {
     .intro {
         grid-template-columns: 1fr;
         word-wrap: break-word;
+    }
+    /*Menu*/
+    #btn-menu {
+        display: block;
+        position: absolute;
+        width: 30px;
+        filter: invert();
+        left: 5px;
+        z-index: 1;
+    }
+    #menu:checked ~ nav a{
+        top: 0;
+        transition: 200ms;
+    }
+    #menu:checked ~ nav {
+        height: fit-content;
     }
 }
