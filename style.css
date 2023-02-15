@@ -66,8 +66,13 @@ main {
 }
 
 #winners {
-    width: 500px;
+    width: 90%;
     margin-left: 10px;
+}
+
+#imagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #intro {
@@ -84,8 +89,27 @@ main {
     margin-right: 10px;
 }
 
+/*Rodapé*/
+footer {
+    border-top: 5px;
+    border-color: rgb(0, 129, 0);
+    border-style: ridge;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#sec1 {
+    margin-left: 10px;
+}
+#sec2 {
+    text-align: right;
+    margin-right: 10px;
+}
+
 /*Responsivo Tablet*/
-@media (max-width: 1210px) {
+@media (max-width: 1296px) {
     header {
         width: 50%;
     }
@@ -144,5 +168,16 @@ main {
     }
     #menu:checked ~ nav {
         height: fit-content;
+    }
+    #imagens {
+        gap: 6px;
+        grid-template-columns: 1fr;
+    }
+    /*Rodapé*/
+    footer {
+        grid-template-columns: 1fr;
+    }
+    #sec1,#sec2{
+        text-align: center;
     }
 }

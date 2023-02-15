@@ -1,0 +1,26 @@
+#linha-intro {
+    width: 90%;
+}
+
+#players {
+    margin-left: 10px;
+}
+
+.img-players {
+    width: 200px;
+}
+
+.gain {
+    color: yellow;
+}
+
+/*Responsivo Mobile*/
+@media (max-width: 600px) {
+    #intro {
+        text-align: center;
+    }
+    .players-text {
+        text-align: justify;
+        margin-right: 10px;
+    }
+}
